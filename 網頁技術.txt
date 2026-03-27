@@ -1,0 +1,51 @@
+1. 前端開發 (Frontend) —— 使用者看得到的「面子」
+
+前端工程師負責把設計稿轉化為瀏覽器可以執行的程式碼，並確保在手機或電腦上都能完美顯示。
+
+    核心技術：
+
+        HTML5： 定義網頁的結構與內容。
+
+        CSS3： 控制視覺風格，包括排版（Flexbox, Grid）與動畫。
+
+        JavaScript (ES6+)： 讓網頁動起來的核心邏輯。
+
+    主流框架（現在的三大主流）：
+
+        React： 由 Meta (Facebook) 開發，目前在職場上需求最高，強調「組件化」與「虛擬 DOM」。
+
+        Vue.js： 語法直覺、容易上手，在台灣中小企業與電商平台非常受歡迎。
+
+        Angular： Google 出品，架構嚴謹，適合超大型企業系統。
+
+    熱門趨勢： TypeScript（幫 JS 加上型別檢查）、Next.js（提升 SEO 與效能的框架）。
+
+2. 後端開發 (Backend) —— 運算邏輯的「裡子」
+
+後端負責處理資料庫、伺服器邏輯、會員登入與安全性。
+
+    熱門程式語言：
+
+        Node.js： 使用 JavaScript 寫後端，前後端語言統一，開發效率高。
+
+        Python (Django/FastAPI)： 語法簡潔，與 AI/機器學習 整合最方便。
+
+        Go (Golang)： 效能極佳且省資源，適合高併發的微服務架構。
+
+        PHP (Laravel)： 老牌但依然強大，許多 WordPress 網站或傳統專案的首選。
+
+    資料庫 (Database)：
+
+        關聯式 (SQL)： MySQL、PostgreSQL（結構嚴謹，適合金融/訂單）。
+
+        非關聯式 (NoSQL)： MongoDB、Redis（彈性高，適合快取/社群動態）。
+
+3. 維運與基礎設施 (DevOps & Infrastructure) —— 穩固的「地基」
+
+現代 Web 技術不再只是把程式碼寫完就好，還需要確保它能穩定運作。
+
+    雲端平台： AWS (Amazon)、GCP (Google Cloud)、Azure (Microsoft)。
+
+    容器化技術： Docker（把應用打包成小貨櫃）與 Kubernetes (K8s)（管理成千上萬個小貨櫃）。
+
+    API 串接： RESTful API 是主流，而 GraphQL 則在需要精確抓取資料時大受歡迎。
