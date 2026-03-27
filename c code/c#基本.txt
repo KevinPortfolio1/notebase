@@ -1,0 +1,45 @@
+C# 是一門為了現代開發而生的語言，它在語法上比 C++ 精煉許多，
+並且內建了極其強大的 .NET 生態系
+
+1. 核心語法差異 
+
+特性,C# 做法,優點
+記憶體管理,Garbage Collection (GC),不需要手動 delete，完全防止記憶體洩漏。
+指標 (Pointers),預設不使用 (Managed),幾乎不會出現 Segment Fault (閃退)。
+字串處理,原生 string 物件,"支援內插字串 $""Hello {name}""，極其直覺。"
+屬性 (Property),get; set; 語法,簡化封裝邏輯，不需要寫冗長的 Getter/Setter。
+非同步程式,async / await,處理網路請求或檔案讀取時，不會卡住 UI 畫面。
+
+2. C# 常用資料型態
+
+型態,關鍵字,常用場景
+整數,"int, long",一般計數與大型 ID。
+高精度小數,decimal,金融、金流計算首選（比 double 更精準）。
+字串,string,"處理文字，支援多行字串 @""""。"
+變數推導,var,讓編譯器自動判斷型態（現代化寫法）。
+空值許可,"int?, string?",標記該變數是否可以為 null，減少錯誤。
+
+3. 資料容器與 LINQ (最強大的資料處理工具)
+
+容器名稱,語法,特點
+List,List<T>,最常用的動態陣列。
+Dictionary,"Dictionary<K, V>",快速查找鍵值對。
+LINQ 篩選,.Where(x => ...),從清單中找出符合條件的資料。
+LINQ 轉換,.Select(x => ...),將資料投影轉換成另一種格式。
+
+4. 檔案處理 (File I/O) 簡化表
+
+功能,C# 快速寫法
+讀取整份文件,"string content = File.ReadAllText(""test.txt"");"
+寫入整份文件,"File.WriteAllText(""test.txt"", ""Hello"");"
+逐行讀取,"foreach (var line in File.ReadLines(""test.txt"")) { ... }"
+路徑組合,"Path.Combine(""folder"", ""file.txt""); (自動處理斜線)"
+
+5. C# 實際應用場景 (Solution Map)
+
+應用目標,推薦技術棧 (Technology Stack)
+遊戲開發,Unity (目前全球最普及的遊戲引擎)。
+網頁後端 (API),ASP.NET Core (高效能、跨平台)。
+視窗程式,WPF (支援強大的 UI 動畫與設計)。
+手機 App,MAUI (一份程式碼產出 iOS/Android)。
+AI 與大數據,ML.NET (微軟推出的機器學習框架)。
