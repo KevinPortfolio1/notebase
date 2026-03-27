@@ -1,0 +1,55 @@
+1. 基本資料型態 (Primitive Types)
+
+型態,Java (固定),C / C++ (變動)
+int,4 Bytes (32-bit),可能 2 或 4 Bytes
+long,8 Bytes (64-bit),可能 4 或 8 Bytes
+
+Java 的 boolean: 只有 true 和 false。它不接受整數轉換。
+
+Java (char): 佔用 2 Bytes (16-bit)。
+因為 Java 出生時就決定全面支持國際化的 Unicode。你可以直接寫：char c = '中';
+C / C++ (char): 傳統上只佔 1 Byte (8-bit)，主要基於 ASCII 碼。
+    若要存中文，C/C++ 需要使用特殊的寬字元（如 wchar_t）或字串處理，比較麻煩。
+C# (char): 跟 Java 一樣是 2 Bytes，同樣支持 Unicode。
+
+2. 引用資料型態 (Reference Types)
+
+它們存儲的是記憶體位址（指標的變體），實際內容存放在「堆 (Heap)」中。
+
+    字串 (String)： Java 的 String 是物件，且是不可變的 (Immutable)。
+
+    陣列 (Array)： 即使是基本型態的陣列（如 int[]），在 Java 中也被視為物件。
+
+    類別 (Class) 與 介面 (Interface)： 你自定義的所有內容
+	
+	
+特性,Java,C / C++,C#,Python
+String 是否可變,不可變,可變,不可變,不可變
+String 比較方式,.equals() (比內容),strcmp() 或 ==,== (被重載為比內容),== (比內容)
+Array 邊界檢查,強制檢查 (安全),不檢查 (危險/快速),強制檢查,強制檢查
+Array 是否為物件,是,否 (只是位址),是,是 (以 List 形式)
+
+
+-------------------------------------------------------------------------
+1. 字串的「不可變性」 (Immutability)
+
+在 Java、C# 中，當你修改字串時，系統會建立一個全新的字串。
+
+    影響： 在大量迴圈中直接用 + 拼接字串會導致效能極差。
+
+    解決： Java 使用 StringBuilder；C# 也是 StringBuilder。
+
+    對比： C++ 可以直接在原字串記憶體位置修改，效能極高，但需開發者自行確保空間足夠。
+
+2. 陣列的「安全性」 (Safety)
+
+    Java / C#： 如果你宣告長度 5 的陣列卻存取 index[10]，程式會立刻停止並報錯。
+
+    C / C++： 程式會繼續執行並讀取到「不屬於該陣列」的記憶體資料，這是歷史上許多電腦病毒（如緩衝區溢位攻擊）的主要來源。
+
+3. 統一類型系統 (Unified Type System)
+
+    C# 的優勢： 它的 int 其實就是 System.Int32。你可以寫 5.ToString()。
+
+    Java 的堅持： int 就是 int，它不是物件。如果你需要物件特性，必須手動或自動轉成 Integer 類別。
+
