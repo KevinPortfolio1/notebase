@@ -1,0 +1,51 @@
+資訊工具
+
+1. 核心開發環境 (IDE / Editors)
+2. 版本控制與協作 (Version Control)
+3. AI 編程助手 (AI Pair Programmer)
+4. 容器化與部署 (Infrastructure)
+
+框架
+
+前端開發（Frontend）
+
+前端框架主要負責使用者介面（UI）與互動邏輯。
+
+    React: 目前全球市佔率最高。
+	由 Meta 維護，核心概念是「組件化」與虛擬 DOM。
+	其生態系龐大，幾乎是求職必備。
+
+    Vue.js: 以易上手、文檔清晰著稱。
+	在亞洲市場（尤其是中文圈）非常流行，適合追求開發效率的小型到中型專案。
+
+    Next.js: 
+	建立在 React 之上的框架，專門解決 SEO 與效能問題（支援 SSR 伺服器端渲染），
+	是現在現代網頁開發的首選。
+	
+後端開發（Backend）
+
+程式語言,				推薦框架,					特點
+Python,					Django / FastAPI,	Django 適合大型快速開發；FastAPI 則是目前效能最強、最受歡迎的 API 框架。
+JavaScript (Node.js),Express / NestJS,		Express 是經典老牌；NestJS 則引入了 Angular 的架構，適合大型企業級開發。
+Java,				Spring Boot,			企業級應用程式的黃金標準，極度穩定且功能強大。
+Go,					Gin,					極簡且效能極高，適合處理高併發的微服務架構。
+
+行動裝置開發（Mobile）
+
+如果你想同時開發 iOS 與 Android 應用程式：
+
+    Flutter: 由 Google 開發，使用 Dart 語言
+	繪圖效能極佳，能做出非常華麗且流暢的 UI
+
+    React Native: 讓你用 React 的邏輯寫 App，程式碼複用率高，
+	適合已經熟悉網頁開發的工程師。
+	
+資料科學與 AI（Data Science & AI）
+
+如果你對人工智慧感興趣，這些框架是業界標配：
+
+    PyTorch: 目前學術界與業界最熱門的深度學習框架，靈活性極高。
+
+    LangChain: 2024 年後爆發式成長，專門用於開發「大語言模型（LLM）」應用的框架，
+	想做 AI Agent 必學。
+	
