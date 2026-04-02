@@ -1,0 +1,60 @@
+1. Two Sum
+
+Given an array of integers nums and an integer target, 
+return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, 
+and you may not use the same element twice.
+
+You can return the answer in any order.
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Example 2:
+
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+Example 3:
+
+Input: nums = [3,3], target = 6
+Output: [0,1]
+ 
+
+Constraints:
+
+2 <= nums.length <= 104
+-109 <= nums[i] <= 109
+-109 <= target <= 109
+Only one valid answer exists.
+
+Follow-up: Can you come up with an algorithm that is less 
+than O(n2) time complexity?
+
+O(n2) 的解法，這通常被稱為 暴力法 (Brute Force)
+
+解題邏輯：哈希表法 (One-pass Hash Map)
+
+與暴力法不同，我們不需要用兩層迴圈去「配對」，而是邊走邊記：
+
+    建立一個空字典，用來存放 值 : 索引。
+
+    遍歷陣列：
+
+        計算當前數字需要的「補數」是多少？也就是 complement = target - nums[i]。
+
+        檢查：這個補數是否已經在字典裡了？
+
+            如果在：代表我們找到了這對組合，回傳 [字典中的索引, 當前索引]。
+
+            如果不在：把當前的數字和它的索引存進字典，繼續往下找。
+
+複雜度分析
+
+    時間複雜度： O(n)
+    我們只需遍歷陣列一次。字典的查找操作（Look-up）平均時間複雜度為 O(1)。
+
+    空間複雜度： O(n)
+    最糟情況下，我們需要把 n 個元素都存進字典裡。
+
