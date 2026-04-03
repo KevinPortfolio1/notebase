@@ -1,0 +1,9 @@
+技術,基於協議,方向性,特點
+WebSocket,TCP,雙向 (Full-duplex),成熟、通用、長連線
+WebRTC,UDP (主要),雙向 (P2P),低延遲影音、P2P 數據
+gRPC,HTTP/2,雙向/單向串流,強型別、微服務通訊
+SSE,HTTP,單向 (Server -> Client),輕量、文字格式、自動重連
+WebTransport,HTTP/3,雙向,現代、支援不可靠傳輸、低延遲
+Unix Domain Sockets: 用於同一台機器內不同進程間的通訊（IPC），
+速度比 TCP 快很多，因為不經過網路堆疊。
+MQTT: 專為物聯網 (IoT) 設計的輕量級發布/訂閱協議，適用於頻寬有限的情況。
